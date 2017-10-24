@@ -1,5 +1,5 @@
 #!/bin/bash
-# hpc_backup.sh
+# hpc_backup.bash
 
 #   Backup cron script
 #   Program will backup specified directories to specified backup drive and has an option for incremental backups.
