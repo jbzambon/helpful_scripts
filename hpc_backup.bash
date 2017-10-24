@@ -1,14 +1,17 @@
 #!/bin/bash
-
 # hpc_jbzambon_backup.sh
-#   Backup cron script
-#   Program will backup specified directories on HPC to specified backup drive
 
-# Backup cron script
-# Joseph B. Zambon
+#   Backup cron script
+#   Program will backup specified directories to specified backup drive and has an option for incremental backups.
+#   Usage:
+#     1.  Set local drive (backup_drive)
+#     2.  Set remote backup directories (backup_dirs)
+#     3.  Run initial backup with type=0
+#     4.  After initial backup is complete, set type=1 and run as cronjob as often as you like
+
+# Joseph B. Zambon, jbzambon@ncsu.edu
 # 22 November 2016
 #  Modified: 24 October 2017
-
 
 # Define local backup destination directory
 backup_drive=/raid0/backups/jbzambon
@@ -24,6 +27,7 @@ backup_dirs=(
 type=0
 
 # Do nothing below this line
+#________________________________________________________________________________________________
 
 date=`date "+%Y-%m-%d"`
 
